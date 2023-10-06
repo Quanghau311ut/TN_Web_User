@@ -1,0 +1,80 @@
+#news-list-layout{
+  position: relative;
+
+}
+.wrp-title {
+  background: #f5f5f5;
+  box-shadow: inset 0 10px 20px 0 #e3dad0;
+  font-size: 16.67px;
+  text-transform: uppercase;
+}
+.wrp-title ol.breadcrumb {
+  background: #0000;
+  padding-left: 0;
+  line-height: 65px;
+}
+.news-list{
+  clear: both;
+}
+.lastest-news{
+  box-sizing: border-box;
+}
+.title-category{
+  background: #c3151c;
+    margin-bottom: 30px;
+    padding: 15px 20px 15px 30px;
+}
+.news-list .title-category h6 {
+  font-family: GoogleSans-Bold;
+  font-size: 18px;
+  margin-bottom: 0;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+}
+.news-list .title-category h6 a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.news-list .lastest-news a {
+  font-weight: 600;
+    color: #333;
+    font-size: 18px;
+    font-family: GoogleSans-Bold;
+    text-decoration: none;
+}
+.news-list .lastest-news a:hover {
+  font-weight: 600;
+    color: #333;
+    font-size: 20px;
+    font-family: GoogleSans-Bold;
+    text-decoration: none;
+}
+.news-list .lastest-news .i-date {
+  margin-bottom: 5px;
+  color: #8a8a8a;
+  font-size: 14px;
+  font-family: GoogleSans-Italic;
+  display: block;
+}
+.news-list .lastest-news .i-imgnews{
+  float: left;
+  margin-right: 20px;
+  width: 240px;
+}
+.news-list .lastest-news p.description-news {
+  color: #000;
+  line-height: 25px;
+  margin-bottom: 0;
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  text-align: justify;
+  font-size: 14px
+}
+.lastest-news article{
+  margin: 100px 0;
+}

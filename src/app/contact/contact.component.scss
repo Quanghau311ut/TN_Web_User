@@ -1,0 +1,72 @@
+.wrp-title {
+  background: #f5f5f5;
+  box-shadow: inset 0 10px 20px 0 #e3dad0;
+  font-size: 16.67px;
+  text-transform: uppercase;
+}
+.wrp-title ol.breadcrumb {
+  background: #0000;
+  padding-left: 0;
+  line-height: 65px;
+}
+.wrp-title ol.breadcrumb .breadcrumb-item.active {
+  color: #333;
+  font-family: GoogleSans-Bold;
+  font-weight: 600;
+  font-size: 18px
+}
+.contact-form h3 {
+  color: #333;
+  margin-bottom: 20px;
+  font-family: GoogleSans-Medium;
+}
+.form-row i {
+  color: #c4171e;
+  font-size: 5px;
+  padding-left: 5px;
+}
+.form-group i {
+  color: #c4171e;
+  font-size: 5px;
+  padding-left: 5px;
+}
+.contact-information {
+  background-color: #f3f3f3;
+  padding: 40px 30px;
+  color: #333;
+  min-height: 386px;
+}
+.contact-information h3 {
+  font-size: 22.92px;
+  font-family: GoogleSans-Medium;
+  text-align: center;
+  position: relative;
+  padding-bottom: 40px;
+  font-weight: 550;
+}
+.contact-information h3:after {
+  content: "";
+  border-bottom: 2px solid #0c6e39;
+  position: absolute;
+  top: 35px;
+  left: calc(50% - 30px);
+  width: 60px;
+}
+.contact-schname h6 {
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-size: 13px;
+  font-family: GoogleSans-Bold;
+  color: #00377a;
+  font-weight: 550;
+}
+.contact-address {
+  font-size: 15px;
+  font-family: GoogleSans-Regular;
+  margin-bottom: 25px;
+}
+.contact-information p {
+  font-size: 15px;
+  font-family: GoogleSans-Regular;
+  margin-bottom: 7px;
+}
