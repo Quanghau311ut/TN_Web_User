@@ -11,9 +11,10 @@ import { MostViewComponent } from './most-view/most-view.component';
 import { ListNewsComponent } from './list-news/list-news.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ContactComponent } from './contact/contact.component';
+import { IntroductComponent } from './introduct/introduct.component';
 
 @NgModule({
-  declarations: [				
+  declarations: [					
     AppComponent,
     HeaderComponent,
     FooterComponent,
@@ -22,7 +23,8 @@ import { ContactComponent } from './contact/contact.component';
       MostViewComponent,
       ListNewsComponent,
       SlideShowComponent,
-      ContactComponent
+      ContactComponent,
+      IntroductComponent
    ],
   imports: [
     BrowserModule,
