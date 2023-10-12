@@ -12,23 +12,27 @@ import { ListNewsComponent } from './list-news/list-news.component';
 import { SlideShowComponent } from './slide-show/slide-show.component';
 import { ContactComponent } from './contact/contact.component';
 import { IntroductComponent } from './introduct/introduct.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [					
+  declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
     HomeComponent,
     Detail_newComponent,
-      MostViewComponent,
-      ListNewsComponent,
-      SlideShowComponent,
-      ContactComponent,
-      IntroductComponent
-   ],
+    MostViewComponent,
+    ListNewsComponent,
+    SlideShowComponent,
+    ContactComponent,
+    IntroductComponent
+  ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

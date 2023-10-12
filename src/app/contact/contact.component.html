@@ -1,82 +1,66 @@
 <div id="contact-layout" class="ng-star-inserted">
-  <div class="posContainer">
-    <div id="contact">
-      <div class="wrp-title">
-        <div class="container">
-          <nav  aria-label="breadcrumb">
-            <ol  class="breadcrumb">
-            <li  aria-current="page" class="breadcrumb-item active">Liên hệ</li>
-          </ol>
-        </nav>
-        </div>
-      </div>
-      <div class="container">
-        <div class="row" style="margin-top: 40px">
-          <div class="col-md-6">
-            <div class="contact-form">
-              <h3 style="font-size: 19px;">Gửi thông tin liên hệ</h3>
-              <form  novalidate="" autocomplete="off" class="ng-untouched ng-pristine ng-invalid">
-                <div  class="form-group">
-                  <label  for="inputText1">Họ và tên
-                    <sup  style="top: -0.3em;">
-                      <i  class="fas fa-star"></i>
-                    </sup>
-                  </label>
-                  <input  type="text" id="inputText1" name="UserName" required="" class="form-control ng-untouched ng-pristine ng-invalid">
-                </div>
-                <div class="form-row">
-                  <div  class="col">
-                    <label  for="inputEmail">Email
-                      <sup  style="top: -0.3em;">
-                        <i  class="fas fa-star"></i>
-                      </sup>
-                    </label>
-                    <input  type="email" name="UserEmail" required="" class="form-control ng-untouched ng-pristine ng-invalid">
-                  </div>
-                  <div  class="col">
-                    <label  for="inputPhone">Số điện thoại
-                      <sup  style="top: -0.3em;">
-                        <i  class="fas fa-star"></i>
-                      </sup>
-                    </label>
-                    <input  type="text" name="PhoneNumber" required="" class="form-control ng-untouched ng-pristine ng-invalid">
-                  </div>
-                </div>
-                <div  class="form-group">
-                  <label  for="inputText2">Tiêu đề
-                    <sup  style="top: -0.3em;">
-                      <i  class="fas fa-star"></i>
-                    </sup>
-                  </label>
-                  <input  type="text" id="inputText2" name="Title" required="" class="form-control ng-untouched ng-pristine ng-invalid">
-                </div>
-                <div  class="form-group">
-                  <label  for="exampleFormControlTextarea1">Nội dung liên hệ</label>
-                  <textarea  id="exampleFormControlTextarea1" rows="3" name="ContentComment" class="form-control ng-untouched ng-pristine ng-invalid"></textarea>
-                </div>
-                <p  class="msg"></p>
-                <button  type="submit" class="btn btn-success btn-block">Gửi thông tin</button>
-              </form>
+   <div class="posContainer">
+      <div id="contact">
+         <div class="wrp-title">
+            <div class="container">
+               <nav aria-label="breadcrumb">
+                  <ol class="breadcrumb">
+                     <li aria-current="page" class="breadcrumb-item active">Liên hệ</li>
+                  </ol>
+               </nav>
             </div>
-          </div>
-          <div class="col-md-6">
-            <div class="contact-information">
-              <h3 >Thông tin chung</h3>
-              <div class="contact-schname">
-                <h6>CỔNG THÔNG TIN TRUNG TÂM KHẢO THÍ ĐẠI HỌC QUỐC GIA HÀ NỘI</h6>
-              </div>
-              <div  class="contact-address">
-                <p >Địa chỉ: Tầng 5, Nhà HT2, Khu Đô thị Đại học Quốc gia, Hòa Lạc, Thạch Thất, Hà Nội</p>
-                <p >Điện thoại: (+84) - 24.62532.740</p>
-                <p >Fax: (0299) 3821448</p>
-                <p >Email: trungtamkhaothi@vnu.edu.vn</p>
-                <p >Website: http://cet.vnu.edu.vn/</p>
-              </div>
+         </div>
+         <div class="container">
+            <div class="row" style="margin-top: 40px">
+               <div class="col-md-6">
+                  <div class="contact-form">
+                     <h3 style="font-size: 19px;">Gửi thông tin liên hệ</h3>
+                     <form novalidate="" autocomplete="off" class="ng-untouched ng-pristine ng-invalid" (ngSubmit)="created()">
+                        <div class="form-group">
+                           <label for="inputText1">Điện thoại
+                              <sup style="top: -0.3em;">
+                                 <i class="fas fa-star"></i>
+                              </sup>
+                           </label>
+                           <input type="tel" id="inputText1" name="tel" [(ngModel)]="formData.tel" class="form-control ng-untouched ng-pristine ng-invalid">
+                        </div>
+                        <div class="form-row">
+                           <div class="col">
+                              <label for="inputEmail">Email
+                                 <sup style="top: -0.3em;">
+                                    <i class="fas fa-star"></i>
+                                 </sup>
+                              </label>
+                              <input type="email" name="email" [(ngModel)]="formData.email" class="form-control ng-untouched ng-pristine ng-invalid">
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <label for="exampleFormControlTextarea1">Nội dung liên hệ</label>
+                           <textarea id="exampleFormControlTextarea1" rows="3" [(ngModel)]="formData.content" name="content" class="form-control ng-untouched ng-pristine ng-invalid"></textarea>
+                        </div>
+                        <p class="msg"></p>
+                        <button type="submit" class="btn btn-success btn-block">Gửi thông tin</button>
+                     </form>
+                  </div>
+               </div>
+               <div class="col-md-6">
+                  <div class="contact-information">
+                     <h3>Thông tin chung</h3>
+                     <div class="contact-schname">
+                        <h6>CỔNG THÔNG TIN TRUNG TÂM KHẢO THÍ ĐẠI HỌC QUỐC GIA HÀ NỘI</h6>
+                     </div>
+                     <div class="contact-address">
+                        <p>Địa chỉ: Tầng 5, Nhà HT2, Khu Đô thị Đại học Quốc gia, Hòa Lạc, Thạch Thất, Hà Nội</p>
+                        <p>Điện thoại: (+84) - 24.62532.740</p>
+                        <p>Fax: (0299) 3821448</p>
+                        <p>Email: trungtamkhaothi@vnu.edu.vn</p>
+                        <p>Website: http://cet.vnu.edu.vn/</p>
+                     </div>
+                  </div>
+               </div>
+               <iframe width="100%" height="350" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" style="margin-top: 70px;margin-bottom: 30px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.857454355759!2d105.78343761131093!3d21.038388868958293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab78d37561fb%3A0x5af36f21edf0cc46!2zVHJ1bmcgdMOibSBLaOG6o28gVGjDrSDEkEhRR0hO!5e0!3m2!1sen!2s!4v1646024353279!5m2!1sen!2s" class="ng-star-inserted"></iframe>
             </div>
-          </div>
-          <iframe width="100%" height="350" frameborder="0" allowfullscreen="" aria-hidden="false" tabindex="0" style="margin-top: 70px;margin-bottom: 30px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3723.857454355759!2d105.78343761131093!3d21.038388868958293!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab78d37561fb%3A0x5af36f21edf0cc46!2zVHJ1bmcgdMOibSBLaOG6o28gVGjDrSDEkEhRR0hO!5e0!3m2!1sen!2s!4v1646024353279!5m2!1sen!2s" class="ng-star-inserted"></iframe>
-        </div>
+         </div>
       </div>
-    </div>
-  </div>
+   </div>
 </div>
